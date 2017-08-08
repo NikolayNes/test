@@ -24,5 +24,4 @@ describe('Phototech page Servicecenter', () => {
             expect(subMenu.isDisplayed()).toBeTruthy();
         });
     });
-
 });
