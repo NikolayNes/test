@@ -8,7 +8,6 @@ export class MainPage {
     imgComodoSecure: ElementFinder = $('.secure>img');
 
 
-
     navigateTo() {
         return browser.get('/');
     }
@@ -17,4 +16,5 @@ export class MainPage {
         return $('.basket a').getText();
 
     }
+
 }
