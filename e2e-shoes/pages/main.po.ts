@@ -7,6 +7,10 @@ export class MainPage {
 
     imgComodoSecure: ElementFinder = $('.secure>img');
 
+    login: ElementFinder = $('.login>a');
+
+    linkManShoes: ElementFinder = $('h1 a[href="c-man.html"]');
+
 
     navigateTo() {
         return browser.get('/');
