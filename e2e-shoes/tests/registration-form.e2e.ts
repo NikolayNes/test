@@ -15,10 +15,10 @@ describe('Registrationform', ()=> {
 
     });
 
-    /*it('buttonRegistration', ()=>{
+    it('buttonRegistration', ()=>{
 
         expect(registrationForm.buttonReg.isDisplayed()).toBeTruthy()
-    });*/
+    });
 
     it('check Visibility For Sale Link', ()=> {
         expect(registrationForm.forSale.isDisplayed()).toBeTruthy()
@@ -32,18 +32,16 @@ describe('Registrationform', ()=> {
         registrationForm.radioInlineMen.click();
         registrationForm.inputPhone.sendKeys('380992694234');
 
-        //browser.sleep(15000);
+        browser.sleep(15000);
         registrationForm.inputCaptchaCode.sendKeys('');
 
 
         registrationForm.radioCheckboxAgree.click();
-
+        browser.sleep(3000);
         registrationForm.mainRegistrationButton.click();
 
 
 
-
-        //browser.sleep(15000);
         expect(true).toBeTruthy();
     })
 

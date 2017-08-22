@@ -11,14 +11,17 @@ export class MainPage {
 
     linkManShoes: ElementFinder = $('h1 a[href="c-man.html"]');
 
+    linkWomenShoes: ElementFinder = $('h1 a[href="c-women.html"]');
+
 
     navigateTo() {
         return browser.get('/');
-    }
+    };
 
     getBasketText() {
         return $('.basket a').getText();
 
-    }
+    };
 
-}
+};
+

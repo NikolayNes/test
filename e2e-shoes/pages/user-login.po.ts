@@ -8,19 +8,5 @@ buttonSubmit: ElementFinder = $(".form-group button");
 
 
 
-
-
 }
 
-
-
-
-    /*navigateTo() {
-        return browser.get('/c-man.html')
-
-        navigateTo() {
-            return browser.get('/user_login.php');
-    }
-
-    getBasketText() {
-        return $('.basket a').getText();*/

@@ -7,7 +7,7 @@ import {CManBoots12869} from "../pages/c-man_boots12869.po";
 
 
 
-describe('Buy products', ()=>{
+describe('Buy products shoes', ()=>{
     let mainPage = new MainPage();
     let userLogin = new UserLogin();
     let cMan = new CMan();
@@ -37,9 +37,6 @@ describe('Buy products', ()=>{
         cManBoots12869.selectSize.click();
         cManBoots12869.buyButton.click();
         expect(browser.getCurrentUrl()). toContain('products_basket_list.php');
-
-
-
 
 
     });

@@ -4,7 +4,7 @@ export class RegistrationForm {
 
     fullName: ElementFinder = $$('.form-control').first();
 
-    //buttonReg: ElementFinder = $$('.btn').first();
+    buttonReg: ElementFinder = $$('.btn').first();
 
     forSale: ElementFinder = $('.col-sm-2.hidden-xs.foot_link>a');
 
@@ -14,7 +14,7 @@ export class RegistrationForm {
 
     inputPasswd: ElementFinder = $('*[class="form-control"][name="passwd"]');
 
-    inputPasswd2: ElementFinder = $('*[class="form-control"][name=passwd2]');
+    inputPasswd2: ElementFinder = $('*[class="form-control"][name="passwd2"]');
 
     radioInlineMen: ElementFinder = $$('.radio-inline>input').first();
 
