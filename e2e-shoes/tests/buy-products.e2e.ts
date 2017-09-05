@@ -62,6 +62,8 @@ describe('Buy products shoes', ()=>{
 
         expect(basketList.basketIsAmpty.getText()).toContain('Корзина пуста.');
 
+        browser.sleep(2000);
+
 
     });
 
