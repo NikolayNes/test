@@ -8,5 +8,5 @@ buttonSubmit: ElementFinder = $(".form-group button");
 
 
 
-}
+};
 
