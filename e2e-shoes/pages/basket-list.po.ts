@@ -7,7 +7,7 @@ export class BasketList {
     };
     deleteProductFromBasket: ElementFinder = $('.fa.fa-times');
 
-    basketIsAmpty: ElementFinder = $('.main_text');
+    basketIsEmpty: ElementFinder = $('.main_text');
 
 
 

@@ -60,7 +60,7 @@ describe('Buy products shoes', ()=>{
 
         //expect(element(by.css('.fa.fa-times')).isDisplayed()).toBe(false);
 
-        expect(basketList.basketIsAmpty.getText()).toContain('Корзина пуста.');
+        expect(basketList.basketIsEmpty.getText()).toContain('Корзина пуста.');
 
         browser.sleep(2000);
 
