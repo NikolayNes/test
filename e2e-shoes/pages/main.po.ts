@@ -18,10 +18,10 @@ export class MainPage {
         return browser.get('/');
     };
 
-    getBasketText() {
+    /*getBasketText() {
         return $('.basket a').getText();
 
-    };
+    };*/
 
 };
 

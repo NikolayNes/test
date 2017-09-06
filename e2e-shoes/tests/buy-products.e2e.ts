@@ -56,7 +56,7 @@ describe('Buy products shoes', ()=>{
 
         basketList.deleteProductFromBasket.click();
 
-        browser.sleep(2000); //checking basket. Should be empty
+        browser.sleep(2000); 
 
         //expect(element(by.css('.fa.fa-times')).isDisplayed()).toBe(false);
 
