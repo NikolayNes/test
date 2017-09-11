@@ -27,11 +27,6 @@ export class RegistrationForm {
     mainRegistrationButton: ElementFinder = $$('.btn').last();
 
 
-
-
-
-
-
     navigateTo() {
         return browser.get('/user_reg.php');
     }
