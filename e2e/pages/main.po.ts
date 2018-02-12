@@ -1,15 +1,27 @@
-import {$, $$, browser, ElementArrayFinder, ElementFinder} from "protractor";
+import { $, browser, ElementFinder } from 'protractor';
 
 export class MainPage {
-    registrationForm: ElementFinder = $('.memb_login');
-    categoriesMain: ElementArrayFinder = $$('.kategorii');
-    login: any;
+    linkVittoRossi: ElementFinder = $('a[href*="brand-vitto"]');
+    advancedSearchForShoes: ElementFinder = $('a[href*="products_search"]');
+    imgComodoSecure: ElementFinder = $('.secure>img');
+    linkManShoes: ElementFinder = $('h1 a[href="c-man.html"]');
+    linkWomenShoes: ElementFinder = $('h1 a[href="c-women.html"]');
+    basketButton: ElementFinder = $('.basket_panel_link');
 
-    navigateTo() {
+    navigate() {
         return browser.get('/');
     }
 
-    getH1Text() {
-        return $('.header h1').getText();
+    clickManShoes() {
+        return this.linkManShoes.click();
+    }
+
+    clickWomenShoes() {
+        return this.linkWomenShoes.click();
+    }
+
+    waitForLoading(timeSec: number) {
+        return browser.sleep(timeSec * 1000);
     }
 }
+

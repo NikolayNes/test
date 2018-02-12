@@ -5,3 +5,5 @@
 /e2e/*.js
 /e2e/*.map
 /.idea
+/reports
+npm-debug.log

@@ -1,52 +1,41 @@
+import { RegistrationForm } from '../pages/registration-form.po';
+import { MainPage } from '../pages/main.po';
 
-import {RegistrationForm} from "../pages/registration-form.po";
-import {browser} from "protractor";
-
-describe('Registrationform', ()=> {
+xdescribe('Registrationform', () => {
     let registrationForm = new RegistrationForm();
-    beforeAll(()=> {
+    let mainPage = new MainPage();
+
+    beforeAll(() => {
         registrationForm.navigateTo();
     });
 
-
-    it('name', ()=> {
-
+    it('name is displayed', () => {
         expect(registrationForm.fullName.isDisplayed()).toBeTruthy()
-
     });
 
-    it('buttonRegistration', ()=>{
-
+    it('buttonRegistration is displayed', () => {
         expect(registrationForm.buttonReg.isDisplayed()).toBeTruthy()
     });
 
-    it('check Visibility For Sale Link', ()=> {
+    it('check Visibility For Sale Link', () => {
         expect(registrationForm.forSale.isDisplayed()).toBeTruthy()
     });
 
-    it('check Registration Form For User', ()=>{
+    it('check Registration Form For User', () => {
         registrationForm.inputFirstName.sendKeys('Ветров Василий Васильевич');
         registrationForm.inputEmail.sendKeys('test19891307@gmail.com');
         registrationForm.inputPasswd.sendKeys('qwerty12345');
-        registrationForm.inputPasswd2.sendKeys('qwerty12345');
+        registrationForm.inputConfirmPasswd.sendKeys('qwerty12345');
         registrationForm.radioInlineMen.click();
         registrationForm.inputPhone.sendKeys('380992694234');
 
-        browser.sleep(15000);
+        mainPage.waitForLoading(3);
         registrationForm.inputCaptchaCode.sendKeys('');
 
-
         registrationForm.radioCheckboxAgree.click();
-        browser.sleep(3000);
+        mainPage.waitForLoading(3);
         registrationForm.mainRegistrationButton.click();
 
-
-
         expect(true).toBeTruthy();
-    })
-
-
-
-
-
+    });
 });

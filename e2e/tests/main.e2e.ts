@@ -1,27 +1,25 @@
-import {MainPage} from "../pages/main.po";
+import { MainPage } from '../pages/main.po';
 
-describe('Main page Servicecenter', () => {
+describe('MainPage', () => {
     let mainPage = new MainPage();
 
     beforeAll(() => {
-        mainPage.navigateTo();
-    });
-    it('check header', () => {
-        expect(mainPage.getH1Text()).toEqual('Сервисные центры Украины');
+        mainPage.navigate();
     });
 
-    it('check login form', () => {
-        expect(mainPage.registrationForm.isDisplayed()).toBeTruthy();
+    it('Text basket element', () => {
+        expect(mainPage.basketButton.getText()).toEqual('Корзина');
     });
 
-    it('check existing categories', () => {
-        expect(mainPage.categoriesMain.count()).toEqual(8);
+    it('Exist link Vitto Rossi', () => {
+        expect(mainPage.linkVittoRossi.isDisplayed()).toBe(true);
     });
 
-    it('check each category', () => {
-        const categories: Array<String> = ['Фототехника', 'Авто', 'Бытовая техника', 'Телефония и cвязь', 'Компьютерная техника', 'Аудиотехника', 'Видеотехника', 'Промышленное оборудование'];
-        mainPage.categoriesMain.each((category, index) =>{
-            expect(category.getText()).toContain(categories[index]);
-        });
+    it('Exist link Advanced search', () => {
+        expect(mainPage.advancedSearchForShoes.getText()).toEqual('Расширенный поиск обуви');
+    });
+
+    it('Exist comodo img', () => {
+        expect(mainPage.imgComodoSecure.isDisplayed()).toBeTruthy();
     });
 });
