@@ -22,7 +22,7 @@ export class BasketPage {
     }
 
     fillBusketOrder() {
-        this.clearAndSendKeys(this.customerName, 'Shoes.ua - test');
+        this.clearAndSendKeys(this.customerName, 'MyProject.ua - test');
         this.clearAndSendKeys(this.customerPhone, '(097) 3-5555-76');
         this.clearAndSendKeys(this.customerAddress, 'Test Address');
         return this.clearAndSendKeys(this.customerComment, 'Test Comment');

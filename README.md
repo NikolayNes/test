@@ -1,4 +1,4 @@
-# Shoes.ua test
+# Project.ua test
 
 - `git clone`
 - `npm i`

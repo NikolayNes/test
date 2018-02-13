@@ -9,7 +9,7 @@ export class BrandTomfriePage {
     }
 
     navigateToProductID(productID: string) {
-        return browser.get('https://shoes.ua/product/' + productID + '.html');
+        return browser.get(browser.baseUrl + '/product/' + productID + '.html');
     }
 
     getBrandName(product: ElementFinder){

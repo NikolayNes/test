@@ -1,5 +1,5 @@
 {
-  "name": "Shoes.ua-test",
+  "name": "Project.ua-test",
   "version": "0.0.1",
   "scripts": {
     "pree2e": "./node_modules/protractor/bin/webdriver-manager update",
