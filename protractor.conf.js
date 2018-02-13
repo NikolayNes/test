@@ -1,3 +1,5 @@
+const config = require('dotenv');
+const obj = config.load({path: '.env'});
 const SpecReporter = require('jasmine-spec-reporter');
 const Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 
@@ -6,11 +8,15 @@ exports.config = {
     specs: [
         './e2e/**/*.e2e.ts'
     ],
-    baseUrl: 'https://shoes.ua/',
+    baseUrl: process.env.INSTANCE,
     multiCapabilities: [{
         'browserName': 'chrome'
     }
     ],
+    params: {
+        user: process.env.USER_EMAIL,
+        pass: process.env.USER_PASSWORD
+    },
     directConnect: true,
     framework: 'jasmine',
     jasmineNodeOpts: {

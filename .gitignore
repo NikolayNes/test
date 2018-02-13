@@ -7,3 +7,4 @@
 /.idea
 /reports
 npm-debug.log
+**/.env

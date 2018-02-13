@@ -1,4 +1,4 @@
-import { $, $$, ElementFinder } from 'protractor';
+import { $, $$, browser, ElementFinder } from 'protractor';
 
 export class DetailsShoesPage {
 
@@ -8,7 +8,9 @@ export class DetailsShoesPage {
 
     selectSizeAndBuyShoes() {
         this.fieldSize.click();
+        browser.sleep(500);
         this.selectSize.click();
+        browser.sleep(500);
         return this.buyButton.click();
     }
 }

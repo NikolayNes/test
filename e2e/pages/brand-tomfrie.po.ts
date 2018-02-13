@@ -8,6 +8,10 @@ export class BrandTomfriePage {
         return browser.get('/brand-tomfrie.html');
     }
 
+    navigateToProductID(productID: string) {
+        return browser.get('https://shoes.ua/product/' + productID + '.html');
+    }
+
     getBrandName(product: ElementFinder){
         return product.$('a').getText();
     }
