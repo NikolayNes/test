@@ -13,4 +13,8 @@ export class DetailsShoesPage {
         browser.sleep(500);
         return this.buyButton.click();
     }
+
+    buySelectedItem() {
+        return this.buyButton.click();
+    }
 }
