@@ -16,13 +16,13 @@ describe('Registered user: buy Bag: ', () => {
     });
 
     it('Specific position of bag put to basket', () => {
-        if (process.env.BAGID) {
-          commonPage.navigateToProductID(process.env.BAGID);
-          detailsPage.buySelectedItem();
+      if (process.env.BAGID) {
+        commonPage.navigateToProductID(process.env.BAGID);
+        detailsPage.buySelectedItem();
 
-          expect(browser.getCurrentUrl()).toContain('products_basket_list.php');
-          expect(basketPage.basketList.count()).toBeGreaterThan(1);
-        }
+        expect(browser.getCurrentUrl()).toContain('products_basket_list.php');
+        expect(basketPage.basketList.count()).toBeGreaterThan(1);
+      }
     });
 
     it('Confirm and send order', () => {
