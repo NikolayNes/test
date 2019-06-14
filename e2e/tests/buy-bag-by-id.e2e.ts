@@ -23,9 +23,6 @@ describe('Registered user: buy Bag: ', () => {
           expect(browser.getCurrentUrl()).toContain('products_basket_list.php');
           expect(basketPage.basketList.count()).toBeGreaterThan(1);
         }
-        else {
-          return true;
-        }
     });
 
     it('Confirm and send order', () => {
@@ -37,9 +34,6 @@ describe('Registered user: buy Bag: ', () => {
         expect(browser.getCurrentUrl()).toContain('user_orders_success.php');
         expect(basketPage.successh1.getText()).toEqual('Заказ оформлен');
         expect(basketPage.successMessage.getText()).toContain('Заказ успешно оформлен');
-      }
-      else {
-        return true;
       }
     });
 });
