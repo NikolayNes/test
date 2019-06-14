@@ -1,5 +1,5 @@
 const config = require('dotenv');
-const obj = config.load({path: '.env'});
+const c = config.load({path: '.env'});
 const SpecReporter = require('jasmine-spec-reporter');
 const Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 

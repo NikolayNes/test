@@ -2,7 +2,7 @@
   "name": "Project.ua-test",
   "version": "0.0.1",
   "scripts": {
-    "pree2e": "./node_modules/protractor/bin/webdriver-manager update",
+    "update": "./node_modules/protractor/bin/webdriver-manager update",
     "e2e": "./node_modules/.bin/protractor ./protractor.conf.js",
     "e2e-man": "./node_modules/.bin/protractor --specs e2e/tests/buy-man-shoes.e2e.ts",
     "e2e-women": "./node_modules/.bin/protractor --specs e2e/tests/buy-women-shoes.e2e.ts",
